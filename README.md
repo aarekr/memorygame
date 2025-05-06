@@ -1,3 +1,3 @@
-# memorygame
+# Memory Game
 
-A new Flutter project.
+* Programming language: Flutter (Dart)

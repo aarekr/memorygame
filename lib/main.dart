@@ -1,20 +1,32 @@
+import 'package:flame/game.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 void main() {
-  runApp(const MainApp());
+  runApp(GameApp());
 }
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
-
+class GameApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
-      ),
+    return GetMaterialApp(
+      home: StartScreen(),
+    );
+  }
+}
+
+class StartScreen extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Text("Memory Game", style: TextStyle(fontSize: 30)),
+          ])
+      )
     );
   }
 }
